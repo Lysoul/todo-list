@@ -1,0 +1,8 @@
+1. Fix postgres path - Done
+1.1 Setup Docker and Postgres Locally - Done
+1.2 fix the just file
+
+2. Setup cli migration
+2.1 Think about MongoDB
+3. Try CodeRabbit
+4. 
