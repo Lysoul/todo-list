@@ -1,0 +1,139 @@
+FAIL	github.com/Lysoul/todolist [setup failed]
+=== RUN   TestConfig
+=== RUN   TestConfig/Config_struct_has_correct_fields
+=== RUN   TestConfig/Config_fields_are_properly_typed
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts/zero_duration
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts/1_second
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts/20_seconds
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts/1_minute
+=== RUN   TestConfig/Config_with_various_shutdown_timeouts/negative_duration
+--- PASS: TestConfig (0.00s)
+    --- PASS: TestConfig/Config_struct_has_correct_fields (0.00s)
+    --- PASS: TestConfig/Config_fields_are_properly_typed (0.00s)
+    --- PASS: TestConfig/Config_with_various_shutdown_timeouts (0.00s)
+        --- PASS: TestConfig/Config_with_various_shutdown_timeouts/zero_duration (0.00s)
+        --- PASS: TestConfig/Config_with_various_shutdown_timeouts/1_second (0.00s)
+        --- PASS: TestConfig/Config_with_various_shutdown_timeouts/20_seconds (0.00s)
+        --- PASS: TestConfig/Config_with_various_shutdown_timeouts/1_minute (0.00s)
+        --- PASS: TestConfig/Config_with_various_shutdown_timeouts/negative_duration (0.00s)
+=== RUN   TestVersion
+=== RUN   TestVersion/Version_variable_exists
+=== RUN   TestVersion/Version_is_a_string
+=== RUN   TestVersion/Version_default_value
+=== RUN   TestVersion/Version_can_be_modified
+=== RUN   TestVersion/Version_handles_various_formats
+--- PASS: TestVersion (0.00s)
+    --- PASS: TestVersion/Version_variable_exists (0.00s)
+    --- PASS: TestVersion/Version_is_a_string (0.00s)
+    --- PASS: TestVersion/Version_default_value (0.00s)
+    --- PASS: TestVersion/Version_can_be_modified (0.00s)
+    --- PASS: TestVersion/Version_handles_various_formats (0.00s)
+=== RUN   TestConfigStructTags
+=== RUN   TestConfigStructTags/ShutdownTimeout_has_correct_envconfig_tag
+--- PASS: TestConfigStructTags (0.00s)
+    --- PASS: TestConfigStructTags/ShutdownTimeout_has_correct_envconfig_tag (0.00s)
+=== RUN   TestConfigZeroValues
+=== RUN   TestConfigZeroValues/zero_value_Config_is_valid
+=== RUN   TestConfigZeroValues/partially_initialized_Config
+--- PASS: TestConfigZeroValues (0.00s)
+    --- PASS: TestConfigZeroValues/zero_value_Config_is_valid (0.00s)
+    --- PASS: TestConfigZeroValues/partially_initialized_Config (0.00s)
+=== RUN   TestConfigEdgeCases
+=== RUN   TestConfigEdgeCases/very_long_shutdown_timeout
+=== RUN   TestConfigEdgeCases/maximum_duration_value
+=== RUN   TestConfigEdgeCases/minimum_duration_value
+--- PASS: TestConfigEdgeCases (0.00s)
+    --- PASS: TestConfigEdgeCases/very_long_shutdown_timeout (0.00s)
+    --- PASS: TestConfigEdgeCases/maximum_duration_value (0.00s)
+    --- PASS: TestConfigEdgeCases/minimum_duration_value (0.00s)
+=== RUN   TestVersionConcurrency
+=== RUN   TestVersionConcurrency/concurrent_reads_of_Version
+--- PASS: TestVersionConcurrency (0.00s)
+    --- PASS: TestVersionConcurrency/concurrent_reads_of_Version (0.00s)
+=== RUN   TestCliCommand
+=== RUN   TestCliCommand/returns_valid_command_structure
+=== RUN   TestCliCommand/has_start_subcommand
+=== RUN   TestCliCommand/start_subcommand_action_is_callable
+=== RUN   TestCliCommand/command_structure_immutability
+=== RUN   TestCliCommand/handles_nil_parent_context_gracefully
+--- PASS: TestCliCommand (0.00s)
+    --- PASS: TestCliCommand/returns_valid_command_structure (0.00s)
+    --- PASS: TestCliCommand/has_start_subcommand (0.00s)
+    --- PASS: TestCliCommand/start_subcommand_action_is_callable (0.00s)
+    --- PASS: TestCliCommand/command_structure_immutability (0.00s)
+    --- PASS: TestCliCommand/handles_nil_parent_context_gracefully (0.00s)
+=== RUN   TestCliCommandIntegration
+=== RUN   TestCliCommandIntegration/command_can_be_added_to_cli_app
+=== RUN   TestCliCommandIntegration/command_hierarchy_is_valid
+--- PASS: TestCliCommandIntegration (0.00s)
+    --- PASS: TestCliCommandIntegration/command_can_be_added_to_cli_app (0.00s)
+    --- PASS: TestCliCommandIntegration/command_hierarchy_is_valid (0.00s)
+=== RUN   TestCliCommandEdgeCases
+=== RUN   TestCliCommandEdgeCases/command_survives_multiple_invocations
+=== RUN   TestCliCommandEdgeCases/subcommand_action_function_signature
+    cli_test.go:110: 
+        	Error Trace:	/home/jailuser/git/app/cli_test.go:110
+        	Error:      	Object expected to be of type func(*cli.Context) error, but was cli.ActionFunc
+        	Test:       	TestCliCommandEdgeCases/subcommand_action_function_signature
+        	Messages:   	action should match cli.ActionFunc signature
+=== RUN   TestCliCommandEdgeCases/command_metadata_completeness
+--- FAIL: TestCliCommandEdgeCases (0.00s)
+    --- PASS: TestCliCommandEdgeCases/command_survives_multiple_invocations (0.00s)
+    --- FAIL: TestCliCommandEdgeCases/subcommand_action_function_signature (0.00s)
+    --- PASS: TestCliCommandEdgeCases/command_metadata_completeness (0.00s)
+=== RUN   TestCliCommandConcurrency
+=== RUN   TestCliCommandConcurrency/concurrent_command_creation
+--- PASS: TestCliCommandConcurrency (0.00s)
+    --- PASS: TestCliCommandConcurrency/concurrent_command_creation (0.00s)
+FAIL
+FAIL	github.com/Lysoul/todolist/app	0.012s
+=== RUN   TestMigrationInitialization
+=== RUN   TestMigrationInitialization/Migration_variable_is_initialized
+=== RUN   TestMigrationInitialization/Migration_is_of_correct_type
+=== RUN   TestMigrationInitialization/sqlMigrations_embed.FS_is_initialized
+=== RUN   TestMigrationInitialization/sqlMigrations_contains_expected_files
+=== RUN   TestMigrationInitialization/Migration_discovery_completes_without_panic
+=== RUN   TestMigrationInitialization/can_retrieve_migration_list
+--- PASS: TestMigrationInitialization (0.00s)
+    --- PASS: TestMigrationInitialization/Migration_variable_is_initialized (0.00s)
+    --- PASS: TestMigrationInitialization/Migration_is_of_correct_type (0.00s)
+    --- PASS: TestMigrationInitialization/sqlMigrations_embed.FS_is_initialized (0.00s)
+    --- PASS: TestMigrationInitialization/sqlMigrations_contains_expected_files (0.00s)
+    --- PASS: TestMigrationInitialization/Migration_discovery_completes_without_panic (0.00s)
+    --- PASS: TestMigrationInitialization/can_retrieve_migration_list (0.00s)
+=== RUN   TestMigrationDiscovery
+=== RUN   TestMigrationDiscovery/discovered_migrations_are_accessible
+=== RUN   TestMigrationDiscovery/migration_names_follow_convention
+=== RUN   TestMigrationDiscovery/can_read_SQL_file_content
+--- PASS: TestMigrationDiscovery (0.00s)
+    --- PASS: TestMigrationDiscovery/discovered_migrations_are_accessible (0.00s)
+    --- PASS: TestMigrationDiscovery/migration_names_follow_convention (0.00s)
+    --- PASS: TestMigrationDiscovery/can_read_SQL_file_content (0.00s)
+=== RUN   TestMigrationEdgeCases
+=== RUN   TestMigrationEdgeCases/Migration_variable_is_not_nil_after_package_import
+=== RUN   TestMigrationEdgeCases/sqlMigrations_filesystem_is_valid
+=== RUN   TestMigrationEdgeCases/multiple_Sorted_calls_return_consistent_results
+=== RUN   TestMigrationEdgeCases/can_add_migrations_programmatically
+--- PASS: TestMigrationEdgeCases (0.00s)
+    --- PASS: TestMigrationEdgeCases/Migration_variable_is_not_nil_after_package_import (0.00s)
+    --- PASS: TestMigrationEdgeCases/sqlMigrations_filesystem_is_valid (0.00s)
+    --- PASS: TestMigrationEdgeCases/multiple_Sorted_calls_return_consistent_results (0.00s)
+    --- PASS: TestMigrationEdgeCases/can_add_migrations_programmatically (0.00s)
+=== RUN   TestEmbeddedFileSystem
+=== RUN   TestEmbeddedFileSystem/embedded_FS_contains_only_SQL_files
+=== RUN   TestEmbeddedFileSystem/can_stat_embedded_files
+=== RUN   TestEmbeddedFileSystem/embedded_FS_is_read-only
+--- PASS: TestEmbeddedFileSystem (0.00s)
+    --- PASS: TestEmbeddedFileSystem/embedded_FS_contains_only_SQL_files (0.00s)
+    --- PASS: TestEmbeddedFileSystem/can_stat_embedded_files (0.00s)
+    --- PASS: TestEmbeddedFileSystem/embedded_FS_is_read-only (0.00s)
+=== RUN   TestMigrationConcurrency
+=== RUN   TestMigrationConcurrency/concurrent_access_to_Migration_variable
+=== RUN   TestMigrationConcurrency/concurrent_reads_from_embedded_FS
+--- PASS: TestMigrationConcurrency (0.00s)
+    --- PASS: TestMigrationConcurrency/concurrent_access_to_Migration_variable (0.00s)
+    --- PASS: TestMigrationConcurrency/concurrent_reads_from_embedded_FS (0.00s)
+PASS
+ok  	github.com/Lysoul/todolist/db/migrations	0.006s
+FAIL
