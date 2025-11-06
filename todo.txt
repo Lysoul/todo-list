@@ -4,7 +4,7 @@ Setup cli migration - Done
   - module - todolist
   - API - Get current task by current date
   - API - Create task with label or no labels
-  - Stream Pipeline with CRON to pull reminders and send to correct chanel e.g. Discord or Email
+  - Stream Pipeline with CRON to pull reminders and send to correct channel e.g. Discord or Email
 
 - Dockerfile
 - DockerCompose

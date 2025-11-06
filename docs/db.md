@@ -4,8 +4,9 @@ title: Todo List
 ---
 erDiagram
     direction LR
-    tasks ||--o{ labels : contains
-    tasks ||--o{  reminders: has
+    tasks ||--o{ task_labels : ""
+    labels ||--o{ task_labels : ""
+    tasks ||--o{ reminders: contains
     
     tasks { 
         int id PK
@@ -26,13 +27,18 @@ erDiagram
         timestamptz updated_at
     }
     
+    task_labels {
+         int task_id PK
+         int label_id PK
+    }
+
     reminders {
         int id PK
         int task_id FK "References tasks(id)"
         reminder_vendor vendor "The enum type contains email, discord or etc."
+        timestamptz remind_at
         timestamptz created_at
         timestamptz updated_at
     }
-
 
 ```

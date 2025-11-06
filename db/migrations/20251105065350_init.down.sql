@@ -1,3 +1,4 @@
+DROP INDEX IF EXISTS idx_reminders_remind_at;
 DROP INDEX IF EXISTS idx_reminders_task_id;
 DROP INDEX IF EXISTS idx_labels_name;
 DROP INDEX IF EXISTS idx_tasks_created_at;
