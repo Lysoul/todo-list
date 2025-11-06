@@ -30,8 +30,6 @@ func Start() error {
 	var config Config
 	envconfig.MustProcess("", &config)
 
-	log.Info("version " + Version)
-
 	router, httpStart := ginserver.InitGin(config.HTTP, log)
 	basePath := config.HTTP.Prefix
 	router.GET(basePath+"/version", func(c *gin.Context) {

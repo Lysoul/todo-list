@@ -1,8 +1,18 @@
-1. Fix postgres path - Done
-1.1 Setup Docker and Postgres Locally - Done
-1.2 fix the just file
+Setup cli migration - In Progress
+ * Issue about can't find sql file in migration - In Progress
 
-2. Setup cli migration
-2.1 Think about MongoDB
-3. Try CodeRabbit
-4. 
+
+- CRUD API
+- High Level Design
+- 
+- Dockerfile
+- DockerCompose
+- Setup Github action
+
+- AWS deployment
+- Monitoring & Metric
+- Dashboard
+
+- Database Optimization
+- Think about MongoDB
+- Try CodeRabbit

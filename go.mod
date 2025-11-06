@@ -3,16 +3,18 @@ module github.com/Lysoul/todolist
 go 1.25.3
 
 require (
+	github.com/Lysoul/gocommon/ginserver v0.0.0-20251104102020-67275a517ad8
 	github.com/Lysoul/gocommon/monitoring v0.0.0-20251104100821-c56891e40c82
-	github.com/Lysoul/gocommon/postgres v0.0.0-20251103085717-5340c63edb9c
+	github.com/Lysoul/gocommon/postgres v0.0.0-20251106034529-3353abbbaa2e
+	github.com/gin-gonic/gin v1.10.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/uptrace/bun v1.2.15
 	github.com/urfave/cli/v2 v2.27.7
+	go.uber.org/zap v1.27.0
 )
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2 // indirect
-	github.com/Lysoul/gocommon/ginserver v0.0.0-20251104102020-67275a517ad8 // indirect
 	github.com/Lysoul/gocommon/shared v0.0.0-20251104100821-c56891e40c82 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bytedance/sonic v1.12.6 // indirect
@@ -28,7 +30,6 @@ require (
 	github.com/gin-contrib/cors v1.7.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-contrib/zap v1.1.4 // indirect
-	github.com/gin-gonic/gin v1.10.0 // indirect
 	github.com/go-http-utils/fresh v0.0.0-20161124030543-7231e26a4b27 // indirect
 	github.com/go-http-utils/headers v0.0.0-20181008091004-fed159eddc2a // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
@@ -90,7 +91,6 @@ require (
 	go.opentelemetry.io/otel/trace v1.38.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.8.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	go.uber.org/zap v1.27.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	golang.org/x/arch v0.12.0 // indirect
 	golang.org/x/crypto v0.43.0 // indirect
