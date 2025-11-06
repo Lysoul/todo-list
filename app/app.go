@@ -9,7 +9,6 @@ import (
 
 	"github.com/Lysoul/gocommon/ginserver"
 	"github.com/Lysoul/gocommon/monitoring"
-	"github.com/Lysoul/gocommon/postgres"
 	"github.com/gin-gonic/gin"
 	"github.com/kelseyhightower/envconfig"
 )
@@ -18,8 +17,8 @@ import (
 var Version = "unknown"
 
 type Config struct {
-	HTTP     ginserver.Config
-	Postgres postgres.Config
+	HTTP ginserver.Config
+	// Postgres postgres.Config // will use it later
 
 	ShutdownTimeout time.Duration `envconfig:"SHUTDOWN_TIMEOUT" default:"20s"`
 }

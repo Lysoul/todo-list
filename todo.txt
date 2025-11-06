@@ -1,13 +1,22 @@
-Setup cli migration - In Progress
- * Issue about can't find sql file in migration - In Progress
+Setup cli migration - Done
 
+- Features
+  - module - todolist
+  - API - Get current task by current date
+  - API - Create task with label or no labels
+  - Stream Pipeline with CRON to pull reminders and send to correct chanel e.g. Discord or Email
 
-- CRUD API
-- High Level Design
-- 
 - Dockerfile
 - DockerCompose
-- Setup Github action
+
+
+- Auth 
+- Security with OSWAP
+- High Level Design
+- e2e
+- k6 
+- Setup GitHub action
+
 
 - AWS deployment
 - Monitoring & Metric

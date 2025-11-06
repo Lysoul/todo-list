@@ -28,6 +28,12 @@ CREATE TABLE IF NOT EXISTS reminders (
     updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+CREATE TABLE IF NOT EXISTS task_labels (
+    task_id INTEGER NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+    label_id INTEGER NOT NULL REFERENCES labels(id) ON DELETE CASCADE,
+    PRIMARY KEY (task_id, label_id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_tasks_created_at ON tasks (created_at);
 CREATE INDEX IF NOT EXISTS idx_labels_name ON labels (name);
 CREATE INDEX IF NOT EXISTS idx_reminders_task_id ON reminders (task_id);

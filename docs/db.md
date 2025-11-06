@@ -11,9 +11,9 @@ erDiagram
         int id PK
         string title
         string description
-        priorities priority "Enum type"
-        timestampz started_at "The time that task start"
-        timestampz ended_at "The time that task ended"
+        task_priority priority "Enum type"
+        timestamptz started_at "The time that task start"
+        timestamptz ended_at "The time that task ended"
         timestamptz created_at
         timestamptz updated_at
     }
@@ -28,7 +28,8 @@ erDiagram
     
     reminders {
         int id PK
-        vender type "The enum type contains email, discord or etc."
+        int task_id FK "References tasks(id)"
+        reminder_vendor vendor "The enum type contains email, discord or etc."
         timestamptz created_at
         timestamptz updated_at
     }

@@ -4,5 +4,6 @@ DROP INDEX IF EXISTS idx_tasks_created_at;
 DROP TABLE IF EXISTS reminders;
 DROP TABLE IF EXISTS labels;
 DROP TABLE IF EXISTS tasks;
+DROP TABLE IF EXISTS task_labels;
 DROP TYPE IF EXISTS reminder_vendor;
 DROP TYPE IF EXISTS task_priority;
